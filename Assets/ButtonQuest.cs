@@ -16,7 +16,10 @@ public class ButtonQuest : BaseButton
 
     private void ClickButton()
     {
-        CheckList.Instance.AddImage(Icon);
-        HideIcon();
+        if (Icon != null)
+        {
+            CheckList.Instance.AddImage(Icon);
+            HideIcon();
+        }
     }
 }
